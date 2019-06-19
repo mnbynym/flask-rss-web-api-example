@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, abort, request
+from flask_cors import CORS
 import feedparser
 
 app = Flask(__name__)
+CORS(app)
 app.config['JSON_AS_ASCII'] = False
 
 rss_url = "https://news.yahoo.co.jp/pickup/rss.xml"
